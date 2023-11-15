@@ -57,6 +57,8 @@ https://www.bol.com/nl/nl/
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  Je kan geen lange teksten lezen 
+  het is lastig om je te focussen op bepaalde
 
 </details>
 
