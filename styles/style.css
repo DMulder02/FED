@@ -1,12 +1,10 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+* {
+  margin: 0;
+  padding: 0;  
 }
-
-
-
 
 
 
@@ -21,13 +19,59 @@
 
 
 
-
-
 /****************/
 /* JOUW STYLING */
 /****************/
-header section nav ul {
+
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header nav ul {
 	display: none;
 }
-/* jouw code */
 
+
+header ul {
+	padding: 16px 0px;
+	display: flex;
+    list-style: none;
+	justify-content: space-around;
+	align-items: center;
+}
+
+header li {
+    /* Style your menu items as needed */
+    margin-right: 10px;
+}
+
+
+form {
+	background-color: blue;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	padding-left: 16px;
+  }
+
+  form input {
+	all: unset;
+	height: 50%;
+	width: 75%;
+	padding: 6px 10px;
+	background-color: #fff;
+  }
+
+  form button {
+	all: unset;
+	cursor: pointer;
+  }
+  
+  form svg {
+	fill: white;
+	width: 2em;
+	height: 2em;
+	padding: 10px;
+
+  }
