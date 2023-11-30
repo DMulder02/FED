@@ -2,9 +2,16 @@
 /* CSS REMEDY */
 /**************/
 * {
-  margin: 0;
-  padding: 0;  
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/**************/
+/*   FONTS    */
+/**************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 
 
@@ -12,66 +19,369 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: #111;
+	--color-background: #eee;
+	--h1-font: 'Roboto Slab', serif;
+	--h2-font: 'Arial', 'Helvetica', sans-serif;
+	--h2-font-size: 14px;
+	--h2-font-weight: 600;
+
 }
 
 
+/*******************/
+/*  HEADER PAGINA  */
+/*******************/
 
-/****************/
-/* JOUW STYLING */
-/****************/
-
-header{
+header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-}
-header nav ul {
-	display: none;
+	min-height:4em;
+	padding:0 1em;
+	background-image: #ffff;
+	line-height:1;
+	right: 0;
+	left: 0;
+
 }
 
+header img {
+	height: 2em;
+	
+}
 
-header ul {
-	padding: 16px 0px;
+header nav a {
+	padding:.5em 0;
+	color: black;
+	text-decoration:none;
+  }
+
+  header nav > a:first-of-type {
+	display:grid;
+	grid-template-columns:min-content min-content;
+	grid-gap:.25em;
+	align-items:center;
+	font-weight:bold; 
+  }
+  
+  header nav > a:first-of-type img {
+	height:3em;
+  }
+
+header nav > a:last-of-type {
+	display:flex;
+	align-items:center;
+	column-gap:.25em;
+  }
+
+  header nav > a:last-of-type img {
+	width:auto;
+	height:2em;
+  }
+  
+header ol {
+	list-style: none;
 	display: flex;
-    list-style: none;
-	justify-content: space-around;
+}
+
+header ol li {
+	margin-right: 1em;
+	display: flex;
 	align-items: center;
 }
 
-header li {
-    /* Style your menu items as needed */
-    margin-right: 10px;
+header ol li svg {
+	height: 1.7em;
+	width: 1.7em;
+	stroke: darkblue;
+	fill: none;
+	stroke-width: 1.5px;
 }
+
+
+/******************/
+/*  HAMBURGER NAV */
+/*****************/
+
+button:not(disabled) {
+	cursor: pointer;
+}
+
+header button {
+	padding: .5em;
+	display: flex;
+	align-items: center;
+	gap: .25em;
+	background-color: white;
+	border: none;
+	border-radius: .25em;
+	text-align: center;
+	color: black;
+}
+
+header button svg {
+	stroke-width: 0.1em;
+	stroke: darkblue;
+	height: 2.5em;
+	width: 2.5em;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+header nav button svg {
+	stroke-width: 2px;
+	stroke: black;
+	height: 2.5em;
+	width: 2.5em;
+
+}
+
+header nav button {
+	justify-self: end;
+}
+
+header nav {
+	padding: 1em;
+	transition: 0.3s;
+	display: grid;
+	align-content: start;
+	gap: 1em;
+	background-color: #fff;
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	translate: -100% 0%;
+}
+
+header nav ul { 
+	list-style:none;
+  }
+
+  header nav a {
+	display:flex;
+	align-items:center;
+	border-bottom:solid 1px #eee;
+  }
+
+
+header nav.toonMenu {
+	translate: 0% 0%;
+	transition: 0.3s;
+  }
+  
+  
+
+
+/*******************/
+/* FORM SEARCH BAR */
+/*******************/
+
 
 
 form {
-	background-color: blue;
-	height: 100px;
+	background-color: darkblue;
+	height: 80px;
 	display: flex;
 	align-items: center;
-	padding-left: 16px;
-  }
+	padding-left: 1em;
+}
 
-  form input {
+
+form input {
 	all: unset;
 	height: 50%;
 	width: 75%;
-	padding: 6px 10px;
+	padding: 0.4em 0.8em;
 	background-color: #fff;
-  }
+	border-radius: 33px;
+}
 
-  form button {
+
+form button {
 	all: unset;
 	cursor: pointer;
-  }
-  
-  form svg {
-	fill: white;
+}
+
+
+form svg {
+	fill: #fff;
 	width: 2em;
 	height: 2em;
 	padding: 10px;
+}
 
-  }
+
+
+/*******************/
+/*   MAIN STYLING  */
+/*******************/
+
+main h1 {
+	font-size: 1.5em;
+	padding: 1em 0.8em;
+	font-family: var(--h1-font);
+}
+
+main h2 {
+	font-size: 18px;
+	padding-left: 1em;
+	font-family: var(--h2-font);
+	font-size: var(--h2-font-size);
+	font-weight: var(--h2-font-weight);
+}
+
+
+
+/*******************/
+/*   FILM SLIDER   */
+/*******************/
+
+section:first-of-type article {
+	padding-bottom: 0.1em;
+	overflow-x: scroll;
+	transform: translateY();
+	scroll-snap-type: x mandatory;
+	flex-grow: 4;
+	margin: 0em 0.5em 0.5em 0.5em;
+	cursor: grab;
+
+}
+
+section:first-of-type article ol {
+	display: flex;
+	padding: 0;
+	transform: translateX(0);
+	margin: 1em;
+}
+
+article:first-of-type ol li {
+	font-size: 14px;
+	padding: 0.25em 1em;
+	margin-right: 0.4em;
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	border: 1px solid #efefef;
+	border-radius: 0.25em;
+}
+
+article:first-of-type ol li img {
+	height: 3em;
+	padding-right: 0.5em;
+}
+
+
+
+/*******************/
+/* FILTERS PAGINA  */
+/*******************/
+
+main section:nth-of-type(2) {
+	display: flex;
+	padding: 0em 1em 1em 1em;
+	flex-flow: column wrap;
+}
+
+main section:nth-of-type(2) article button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	border-radius: 0.25em;
+	border: none;
+	background-color: blue;
+	color: #ffff;
+	margin-top: 1em;
+	padding: 0.75em 1em;
+	width: 100%;
+}
+
+main section:nth-of-type(2) article button svg {
+	stroke-width: 2;
+	stroke: #ffff;
+	fill: none;
+	height: 2em;
+	padding-right: 0.5em;
+}
+
+
+/* SECTION INSIDE FILTER OPTIONS  */
+
+main section:nth-of-type(2) section {
+	margin-top: 1em;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+main section:nth-of-type(2) section select {
+	width: 40%;
+    padding: 0.5em;
+    margin: 0;
+    line-height: 1.5;
+	background-color: #fff;
+    cursor: pointer;
+}
+
+main section:nth-of-type(2) section svg {
+	margin-left: auto;
+	align-self: center;
+}
+
+
+
+/*******************/
+/*    ARTIKELEN    */
+/*******************/
+
+main section:nth-of-type(3) {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: start;
+	margin: 0em 1em;
+	border-top: 1px solid #c9c9c9;
+}
+
+main section:nth-of-type(3) article {
+	display: flex;
+}
+
+main section:nth-of-type(3) article section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+main section:nth-of-type(3) article section img {
+	width: 10em;
+	padding: 1em 0em;
+}
+
+main section:nth-of-type(3) article section p {
+	background-color: lightblue;
+	font-size: 12px;
+	border: 1px solid #c9c9c9;
+	padding: 1em;
+	margin-right: 3em;
+	
+}
+
+
+main section:nth-of-type(3) article ul {
+	margin-left: 0.5em;	
+	margin-top: 1em;
+	
+}
+
+main section:nth-of-type(3) article ul li{
+	list-style-type: none;
+	font-size: 14px;
+	padding: .5em 0em;
+	
+}
+

@@ -101,12 +101,11 @@ https://www.bol.com/nl/nl/
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+  - Het ging erg goed met mijn website, ik had mijn hamburger menu werkend gemaakt en ik heb een search balk toegevoegd aan mijn website. 
+  - Ik ben verder gaan werken aan de rest van de website en had een scroll functie toegevoegd waarmee je meer content kan zien.
+  - In de feedback sessie kwam er eigenlijk uit dat ik goed op weg was en dat ik gewoon lekker verder kon werken aan mijn website. 
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  
 
 </details>
 
