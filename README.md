@@ -105,8 +105,6 @@ https://www.bol.com/nl/nl/
   - Ik ben verder gaan werken aan de rest van de website en had een scroll functie toegevoegd waarmee je meer content kan zien.
   - In de feedback sessie kwam er eigenlijk uit dat ik goed op weg was en dat ik gewoon lekker verder kon werken aan mijn website. 
 
-  
-
 </details>
 
 
@@ -152,8 +150,11 @@ https://www.bol.com/nl/nl/
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
-
+  - Hamburger menu opent niet, maar hij leest wel de linkjes voor die in de hamburger menu staan.
+  - hij leest de linkjes in de hamburger menu twee keer.
+  - Labels toevoegen aan linkjes en inputvelden.
+  - hij gaat goed langs alle linkjes en buttons.
+  - de navigatie om aan te geven welke pagina je op bent liet niet horen
 </details>
 
 

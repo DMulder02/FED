@@ -1,4 +1,10 @@
 /**************/
+/*   FONTS    */
+/**************/
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap');
+
+/**************/
 /* CSS REMEDY */
 /**************/
 * {
@@ -8,16 +14,12 @@
 }
 
 
-/**************/
-/*   FONTS    */
-/**************/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
+
 :root {
 	--color-text: #111;
 	--color-background: #eee;
@@ -28,10 +30,28 @@
 
 }
 
+/*******************/
+/*  ACTIVE STATES  */
+/*******************/
+
+button:active {
+	border: 2px solid blue;
+}
+
+a:active {
+	border: 2px solid blue;
+	border-radius: .25em;	
+}
+
 
 /*******************/
 /*  HEADER PAGINA  */
 /*******************/
+
+h1 {
+	font-family: var(--h1-font);
+	font-weight: 700;
+}
 
 header {
 	display: flex;
@@ -39,8 +59,8 @@ header {
 	justify-content: space-between;
 	min-height:4em;
 	padding:0 1em;
-	background-image: #ffff;
-	line-height:1;
+	background: #fff;
+	line-height: 1;
 	right: 0;
 	left: 0;
 
@@ -48,37 +68,8 @@ header {
 
 header img {
 	height: 2em;
-	
+	margin-right: auto;
 }
-
-header nav a {
-	padding:.5em 0;
-	color: black;
-	text-decoration:none;
-  }
-
-  header nav > a:first-of-type {
-	display:grid;
-	grid-template-columns:min-content min-content;
-	grid-gap:.25em;
-	align-items:center;
-	font-weight:bold; 
-  }
-  
-  header nav > a:first-of-type img {
-	height:3em;
-  }
-
-header nav > a:last-of-type {
-	display:flex;
-	align-items:center;
-	column-gap:.25em;
-  }
-
-  header nav > a:last-of-type img {
-	width:auto;
-	height:2em;
-  }
   
 header ol {
 	list-style: none;
@@ -104,6 +95,20 @@ header ol li svg {
 /*  HAMBURGER NAV */
 /*****************/
 
+
+header ul a img {
+	margin-right: 1.5em;
+	height: 4em;
+}
+header nav a {
+	padding:1em 0em;
+	color: black;
+	text-decoration:none;
+	font-size: 14px;
+	flex-grow: 1;
+	
+  }
+  
 button:not(disabled) {
 	cursor: pointer;
 }
@@ -112,13 +117,14 @@ header button {
 	padding: .5em;
 	display: flex;
 	align-items: center;
-	gap: .25em;
 	background-color: white;
 	border: none;
 	border-radius: .25em;
 	text-align: center;
 	color: black;
 }
+
+
 
 header button svg {
 	stroke-width: 0.1em;
@@ -139,10 +145,10 @@ header nav button svg {
 
 header nav button {
 	justify-self: end;
+	padding: 1em 1em 0em 0em;
 }
 
 header nav {
-	padding: 1em;
 	transition: 0.3s;
 	display: grid;
 	align-content: start;
@@ -155,11 +161,38 @@ header nav {
 	bottom: 0;
 	right: 0;
 	translate: -100% 0%;
+	overflow-y: scroll;
 }
 
 header nav ul { 
 	list-style:none;
+	padding: 1em;
+
   }
+
+header nav ul li {
+	display: flex;
+}
+
+header nav ul li svg {
+	margin-left: auto;
+	fill: none;
+	height: 1.5em;
+	width: 1.5em;
+	stroke-width: 2;
+	stroke: none;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+}
+
+header nav ul li:hover svg {
+	stroke: black;
+}
+
+header nav ul li:hover {
+	background-color: rgba(209, 232, 255, 0.5);
+}
+
 
   header nav a {
 	display:flex;
@@ -168,52 +201,87 @@ header nav ul {
   }
 
 
-header nav.toonMenu {
+header nav.toonMenu, header nav:focus-within {
 	translate: 0% 0%;
 	transition: 0.3s;
   }
-  
-  
 
+header nav ol {
+	border-top: 1px solid #b3b3ba;
+	display: flex;
+	flex-flow: column nowrap;
+}
+  
+header nav ol button {
+	color: blue;
+	padding: 1em 0em;
+	gap: 1.5em;
+	border-bottom: 1px solid #b3b3ba;
+}
+
+header nav ol svg {
+	fill: none;
+	stroke: blue;
+	stroke-width: 1px;
+	height: 2.5em;
+	width: 2.5em;
+}
+
+header nav ol svg{
+
+	fill: none;
+	stroke: blue;
+	stroke-width: 1px;
+	height: 2.5em;
+	width: 2.5em;
+}
+  
 
 /*******************/
 /* FORM SEARCH BAR */
 /*******************/
 
 
-
 form {
 	background-color: darkblue;
-	height: 80px;
+	height: 5em;
 	display: flex;
+	flex-flow: row wrap;
 	align-items: center;
 	padding-left: 1em;
 }
 
-
 form input {
 	all: unset;
 	height: 50%;
-	width: 75%;
+	width: 90%;
 	padding: 0.4em 0.8em;
 	background-color: #fff;
 	border-radius: 33px;
+	position: relative;
+}
+
+form input::placeholder {
+	color: lightgray;
+	padding-left: 1em;
+	font-size: 1em;
 }
 
 
 form button {
 	all: unset;
 	cursor: pointer;
+	position: absolute;
+	align-self: center;
+	right: 2.5em;
 }
-
 
 form svg {
-	fill: #fff;
-	width: 2em;
-	height: 2em;
-	padding: 10px;
+	fill: darkblue;
+	width: 1.5em;
+	height: 1.5em;
+	
 }
-
 
 
 /*******************/
@@ -227,12 +295,11 @@ main h1 {
 }
 
 main h2 {
-	font-size: 18px;
-	padding-left: 1em;
-	font-family: var(--h2-font);
-	font-size: var(--h2-font-size);
+	font-size: 14px;
 	font-weight: var(--h2-font-weight);
+	padding-left: 1em;
 }
+
 
 
 
@@ -240,25 +307,14 @@ main h2 {
 /*   FILM SLIDER   */
 /*******************/
 
-section:first-of-type article {
-	padding-bottom: 0.1em;
-	overflow-x: scroll;
-	transform: translateY();
-	scroll-snap-type: x mandatory;
-	flex-grow: 4;
-	margin: 0em 0.5em 0.5em 0.5em;
-	cursor: grab;
-
-}
-
-section:first-of-type article ol {
+main article:first-of-type ol {
 	display: flex;
-	padding: 0;
-	transform: translateX(0);
+	padding-bottom: 1em;
+	overflow-x: scroll;
 	margin: 1em;
 }
 
-article:first-of-type ol li {
+main article:first-of-type ol li {
 	font-size: 14px;
 	padding: 0.25em 1em;
 	margin-right: 0.4em;
@@ -269,24 +325,23 @@ article:first-of-type ol li {
 	border-radius: 0.25em;
 }
 
-article:first-of-type ol li img {
+main article:first-of-type ol li img {
 	height: 3em;
 	padding-right: 0.5em;
 }
 
 
 
-/*******************/
-/* FILTERS PAGINA  */
-/*******************/
+/*********************/
+/* FILTERS OP PAGINA */
+/*********************/
 
-main section:nth-of-type(2) {
-	display: flex;
+main div {
+	
 	padding: 0em 1em 1em 1em;
-	flex-flow: column wrap;
 }
 
-main section:nth-of-type(2) article button {
+main div button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -300,7 +355,7 @@ main section:nth-of-type(2) article button {
 	width: 100%;
 }
 
-main section:nth-of-type(2) article button svg {
+main div button svg {
 	stroke-width: 2;
 	stroke: #ffff;
 	fill: none;
@@ -309,29 +364,35 @@ main section:nth-of-type(2) article button svg {
 }
 
 
+
 /* SECTION INSIDE FILTER OPTIONS  */
 
-main section:nth-of-type(2) section {
-	margin-top: 1em;
+main div div {
+	padding: 0;
 	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-	justify-content: space-around;
+	margin: .5em 0em;
 }
 
-main section:nth-of-type(2) section select {
+main div select {
 	width: 40%;
     padding: 0.5em;
     margin: 0;
     line-height: 1.5;
 	background-color: #fff;
     cursor: pointer;
+	margin-right: auto;
 }
 
-main section:nth-of-type(2) section svg {
-	margin-left: auto;
+main div div svg {
 	align-self: center;
+	fill: none;
+	stroke: blue;
+	stroke-width: 2px;
+	height: 1.5em;
+	justify-self: center;
+	margin-left: auto;
 }
+
 
 
 
@@ -339,49 +400,820 @@ main section:nth-of-type(2) section svg {
 /*    ARTIKELEN    */
 /*******************/
 
-main section:nth-of-type(3) {
+
+main section:nth-of-type(1) article {
 	display: flex;
-	flex-flow: column wrap;
-	align-items: start;
-	margin: 0em 1em;
 	border-top: 1px solid #c9c9c9;
 }
 
-main section:nth-of-type(3) article {
-	display: flex;
+
+main section:nth-of-type(1) article:last-of-type {
+	border-bottom: 1px solid #c9c9c9;
 }
 
-main section:nth-of-type(3) article section {
+main section:nth-of-type(1) article div {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: relative;
 }
 
-main section:nth-of-type(3) article section img {
+
+main section:nth-of-type(1) article div img {
 	width: 10em;
-	padding: 1em 0em;
+	padding: 1.5em 0em;
+	align-self: center;
 }
 
-main section:nth-of-type(3) article section p {
-	background-color: lightblue;
-	font-size: 12px;
+main section:nth-of-type(1) article div p {
+	background-color: rgba(209, 232, 255, 0.5);
+	font-size: .75em;
 	border: 1px solid #c9c9c9;
 	padding: 1em;
+	margin: 0em 3em;
+
+}
+	
+main section:nth-of-type(1) article div div {
+	font-size: 1em;
+	display: flex;
+	flex-flow:row nowrap;
+	padding: 1em;
 	margin-right: 3em;
+	justify-content: center;
+
+}
+
+main section:nth-of-type(1) article div div input {
+	margin: 0em 1em 0em 1.5em;
+	height: 36px;
+	width: 36px;
+	align-self: center;
+}
+
+main section:nth-of-type(1) article div svg {
+	stroke-width: 0.1em;
+	stroke: blue;
+	fill: none;
+	height: 2em;
+	width: 2em;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	background-color: #ffff;
+	border-radius: 100%;
+	padding: 0.25em;
+	position: absolute;
+	top: 0.5em;
+	right: 2.5em;
 	
 }
 
-
-main section:nth-of-type(3) article ul {
-	margin-left: 0.5em;	
-	margin-top: 1em;
-	
+main section:nth-of-type(1) article div svg:hover {
+	border: 2px solid blue;
+	transition-duration: .5s;
 }
 
-main section:nth-of-type(3) article ul li{
+main section:nth-of-type(1) article ul {
+	margin: 1em 1em 0em 0em;
+}
+
+main section:nth-of-type(1) article ul a {
+	text-decoration: none;
+	color: black;
+}
+
+
+main section:nth-of-type(1) article ul h2 {
+	font-size: 1.2em;
+}
+
+main section:nth-of-type(1) article ul li{
 	list-style-type: none;
-	font-size: 14px;
+	font-size: .75em;
 	padding: .5em 0em;
+}
+
+/* LIST ITEMS RECHTER KANT */
+
+main section:nth-of-type(1) article ul li h2 {
+ padding: 0;
+}
+main section:nth-of-type(1) article ul li:nth-of-type(3){
+	color: grey;	
+}
+
+main section:nth-of-type(1) article ul li:nth-of-type(5){
+	color: red;
+	font-size: 2em;
+	font-weight: 900;
+	margin-top: 1em;
+}
+
+main section:nth-of-type(1) article ul li:nth-of-type(6){
+	color: green;
+	border: 1px solid green;
+	padding: 0.25em;
+	font-weight: 800;
+	font-size: .75em;
+	text-align: center;
+}
+
+main section:nth-of-type(1) article ul li:nth-of-type(7){
+	color: green;
+	font-size: .75em;
+}
+
+
+
+/***********************/
+/* PAGINATIE NAVIGATIE */
+/**********************/
+
+main section:nth-of-type(1) nav ul {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 1em;
+	list-style: none;
+	gap: .5em;
+	box-sizing: border-box;
+}
+
+main section:nth-of-type(1) nav ul li{
+	border: 1px solid #b3b3ba;
+	padding: 1em 1em;
+}
+
+main section:nth-of-type(1) nav ul li:first-of-type a{
+	color: black;
+	font-weight: bold;
+}
+
+main section:nth-of-type(1) nav ul li:last-of-type{
+	border: 1px solid blue;
+	border-radius: .25em;
+	padding: .75em;
+	margin-left: auto;
+}
+
+main section:nth-of-type(1) nav ul li:nth-of-type(4){
+	border: none;
+	font-weight: bold;
+}
+
+main section:nth-of-type(1) nav ul li:nth-of-type(4) a{
+	color: black;
+}
+	
+main section:nth-of-type(1) nav ul li a {
+	text-decoration: none;
+	color: blue;
+}
+
+main section:nth-of-type(1) nav ul li svg {
+	margin-left: auto;
+	stroke: blue;
+	height: 1.5em;
+	width: 1.5em;
+	stroke-width: 2;
+	fill: none;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+}
+
+
+
+/*******************/
+/*  VERDER KIJKEN? */
+/*******************/
+
+
+main section:nth-of-type(2) {
+	background-color: rgba(209, 232, 255, 0.5);
+	text-align: center;
+	padding: 1.5em;
+}
+
+main section:nth-of-type(2) h2 {
+	font-size: 1.2em;
+	text-align: center;
+	margin-bottom: 1.5em;
+	font-weight: 900;
+
+}
+
+main section:nth-of-type(2) article {
+	border: 1px solid #e2e2e2;
+	border-radius: .25em;
+	display: flex;
+	align-items: center;
+	background-color: #ffff;
+	margin: .75em;
+	padding: 1em;
+	gap: .75em;
+}
+
+main section:nth-of-type(2) article img {
+	height: 4em;
 	
 }
+
+main section:nth-of-type(2) article p  {
+	padding-bottom: .5em;
+	font-size: .9em;
+	color: #b3b3ba;
+}
+
+main section:nth-of-type(2) article h3  {
+	font-size: 1em;
+}
+
+
+main section:nth-of-type(2) article svg {
+	margin-left: auto;
+	stroke: black;
+	height: 1.5em;
+	width: 1.5em;
+	stroke-width: 2;
+	fill: none;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+}
+
+main section:nth-of-type(2) button {
+	margin-top: 1em;
+	padding: 1.2em 1.5em;
+	border: none;
+	color: #ffff;
+	border-radius: .4em;
+	background-color: blue;
+}
+
+
+/*******************/
+/*  VOORDEEL BLOK  */
+/*******************/
+
+main section:nth-of-type(3) {
+	margin: 1em;
+}
+
+main section:nth-of-type(3) h2 {
+	font-size: 1.2em;
+	font-family: var(--h1-font);
+	padding: 0;
+}
+
+main section:nth-of-type(3) p {
+	padding: 1.5em 0em;
+	font-size: 1em;
+}
+
+main section:nth-of-type(3) button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background-color: blue;
+	color: #ffff;
+	border: none;
+	border-radius: .3em;
+	padding: 1em 0em;
+	gap: .75em;
+}
+
+main section:nth-of-type(3) button svg {
+	stroke: #ffff;
+	height: 2em;
+	stroke-width: 2px;
+	fill: none;
+}
+
+
+
+/*******************/
+/*   CONTACT BLOK  */
+/*******************/
+
+
+main section:nth-of-type(4) {
+	background-color: darkblue;
+	padding-bottom: 1em;
+}
+
+main section:nth-of-type(4) h2 {
+	padding: 1.5em 1em;
+	font-size: 1.2em;
+	color: #ffff;
+}
+
+main section:nth-of-type(4) div {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: 1em 1em 1em 2.5em;
+	color: #ffff;
+	
+}
+
+main section:nth-of-type(4) div figure {
+	padding-right: 2em;
+}
+
+main section:nth-of-type(4) div section {
+	display: flex;
+	flex-flow: column;
+}
+
+
+
+main section:nth-of-type(4) h4 {
+	margin-right: auto;
+	color: #fff;
+	font-size: .9em;
+}
+
+main section:nth-of-type(4) svg {
+	stroke: #ffff;
+	height: 3.5em;
+	stroke-width: 2px;
+	fill: none;
+}
+
+main section:nth-of-type(4) div p a {
+	color: #ffff;
+}
+
+
+/*******************/
+/*      FOOTER     */
+/*******************/
+
+footer ul {
+	margin: 0em 1em;
+	list-style: none;
+	
+}
+
+footer ul li {
+	display: flex;
+	align-items: center;
+
+	padding: .75em 0em;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+
+footer ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+footer ul li a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+footer ul li svg {					
+	margin-left: auto;
+	stroke: black;
+	height: 1.5em;
+	width: 1.5em;
+	stroke-width: 2;
+	fill: none;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+}
+
+
+/* SOCIALS */
+
+footer section {
+	margin: 0em 1em;
+	text-align: center;
+	border-bottom: 1px solid #e2e2e2;
+	padding: 2em 0em;
+}
+
+footer section p {
+	font-size: .9em;
+	font-weight: bold;
+	text-align: center;
+}
+
+footer section a {
+	text-align: center;
+	text-decoration: none;
+	color: blue;
+}
+
+footer section ul:last-of-type {
+	margin: 1em 0em;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+}
+
+footer section ul:last-of-type li  {
+	text-decoration: none;
+	list-style: none;
+	border-bottom: none;
+}
+footer section ul:last-of-type li a {
+	text-decoration: none;
+}
+
+footer section ul:last-of-type svg {
+	fill: darkblue;
+	stroke:none;
+	border: none;
+}
+
+footer figure {
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+}
+
+footer img {
+	 height: 9em;
+}
+
+footer div {
+
+ text-align: center;
+}
+
+footer div p{
+	margin: 1em 0em;
+	font-size: .9em;
+}
+
+footer div p a:nth-of-type(1) {
+	color: black;
+}
+
+footer div p:nth-of-type(2) {
+	text-align: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 1.5em;
+	
+}
+footer div p:nth-of-type(2) a {
+	color: black;
+	text-decoration: none;
+	
+}
+
+footer div p:nth-of-type(3) {
+	font-size: .75em;
+	padding-top: 3em;
+}
+
+footer div p:nth-of-type(4) {
+	font-size: .75em;
+}
+
+footer div p a:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+
+
+
+/******************/
+/* DETAIL PAGINA */ 
+/****************/
+
+
+/* BREADCRUMB */
+
+[class="detail"] main a:nth-of-type(1) {
+	text-decoration: none;
+	color: blue;
+	font-size: .9em;
+	display: flex;
+	align-items: center;
+	margin: 2em 0em 0em 1em;
+}
+
+[class="detail"] main svg {
+	rotate: 180deg;
+	fill: none;
+	stroke: blue;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	height: 1.5em;
+	width: 1.5em;
+	stroke-width: 2px;
+}
+
+/* FOTO MET SCROLL */
+
+[class="detail"] section:nth-of-type(1) {
+	padding: 0;
+}
+
+[class="detail"] section:nth-of-type(1) a {
+	margin: 0;
+	text-decoration: none;
+	font-size: .9em;
+}
+
+[class="detail"] section:nth-of-type(1) p {
+	display: flex;
+	flex-flow: row wrap;
+	gap: .25em;
+	margin-left: 1em;
+}
+
+[class="detail"] section:nth-of-type(1) div {
+	display: flex;
+	flex-flow: column nowrap;
+	position: relative;
+}
+
+[class="detail"] section:nth-of-type(1) div ol {
+	list-style: none;
+	display: flex;
+	flex-flow: row nowrap;
+	overflow-x: scroll;
+	padding-bottom: .5em;
+}
+
+[class="detail"] section:nth-of-type(1) div ol img {
+	height: 5em;
+}
+
+[class="detail"] section:nth-of-type(1) div ol li {
+	border: 1px solid #c9c9c9;
+	border-radius: .25em;
+	padding: .25em 1em;
+	margin-right: .5em;
+}
+
+[class="detail"] section:nth-of-type(1) div p {
+	background-color: rgba(209, 232, 255, 1);
+	border: 1px solid #c9c9c9;
+	padding: .25em .5em;
+	font-size: .75em;
+	position: absolute;
+	top: 2em;
+}
+
+[class="detail"] section:nth-of-type(1) div p:nth-of-type(1) {
+	top: 4.5em;
+}
+
+[class="detail"] section:nth-of-type(1) div svg {
+	rotate: 0deg;
+	position: absolute;
+	top: 2em;
+	right: 2em;
+	height: 2em;
+	width: 2em;
+}
+
+
+/* SECTIE KLEUR */
+
+[class="detail"] main button:nth-of-type(1) {
+	display: flex;
+	flex-flow: column nowrap;
+	background-color: #ffff;
+	border: 1px solid #c9c9c9;
+	border-radius: .25em;
+	padding: 1em 1em;
+	width: 85%;
+	margin: 2em 0em 2em 2em;
+	position: relative;
+}
+
+[class="detail"] main button:nth-of-type(1) img {
+	height: 3em;
+	margin-right: 1em;
+	position: absolute;
+	top: .7em;
+}
+
+[class="detail"] main:nth-of-type(1) button svg {
+	rotate: 0deg;
+	stroke: black;
+	position: absolute;
+	right: 1em;
+	top: 1.3em;
+}
+
+[class="detail"] main:nth-of-type(1) button p {
+	padding-left: 3em;
+}
+
+/* KIES JE OPSLAG */
+
+[class="detail"] main button:nth-of-type(2) {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	background-color: #ffff;
+	border: 1px solid #c9c9c9;
+	border-radius: .25em;
+	padding: .5em 1em;
+	width: 85%;
+	margin: 3em 0em 2em 2em;
+	position: relative;
+}
+
+[class="detail"] main button:nth-of-type(2) p {
+	align-self: start;
+	margin: 0;
+	padding: .5em 0em 0em 0em;
+}
+
+[class="detail"] main button:nth-of-type(2) svg {
+	top: 1.4em;
+}
+
+
+/* VERKOOPPRIJS */
+
+[class="detail"] main section:nth-of-type(2) {
+	background: none;
+	padding: 0;
+	margin: 1em;
+	text-align: left;
+}
+
+[class="detail"] main section:nth-of-type(2) div {
+	display: flex;
+	align-items: center;
+	flex-flow: row;
+	gap: .5em;
+	margin-left: .75em;
+	padding: 0;
+}
+
+[class="detail"] main section:nth-of-type(2) div p{
+	background: none;
+	position: static;
+	margin: 0;
+	font-size: 1em;
+	border: none;
+}
+
+[class="detail"] main section:nth-of-type(2) p:first-child {
+	font-weight: 900;
+	font-size: 2em;
+	color: red;
+	padding: 0em 0em .75em .25em;
+	margin: 0;
+}
+
+[class="detail"] main section:nth-of-type(2) div p:nth-of-type(1){
+	border: 1px solid rgb(0, 95, 0);
+	color: rgb(0, 95, 0);
+	padding: .25em;
+	font-size: .9em;
+	font-weight: 600;
+	margin: 0;
+}
+
+[class="detail"] main section:nth-of-type(2) div p:nth-of-type(2){
+	color: rgb(1, 151, 1);
+	font-weight: 900;
+	font-size: .9em;
+	margin: 0;
+	padding: 0;
+}
+
+[class="detail"] main section:nth-of-type(2) p:nth-of-type(2) {
+	padding: .5em 0em 0em .75em;
+	margin: 0;
+	font-size: .9em;
+	color: green;
+}
+
+[class="detail"] main section:nth-of-type(2) p:nth-of-type(3) {
+	padding: .5em 0em 0em .75em;
+	margin: 0;
+	font-size: .9em;
+}
+
+/* WINKELWAGEN BUTTON */
+
+[class="detail"] main button:nth-of-type(3) {
+	background-color: orange;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	padding: 1em;	
+	gap: .25em;
+	font-size: .9em;
+	width: 85%;
+	margin-left: 1em;
+}
+
+[class="detail"] main button:nth-of-type(3) svg {
+	justify-self: center;
+	position: sticky;
+}
+
+
+
+/*****************/
+/* BEZORGOPTIES */
+/***************/
+
+ 
+[class="detail"] main section:nth-of-type(3) h2 {
+	font-size: 1em;
+	padding-bottom: .5em;
+	margin-left: 1em;
+}
+[class="detail"] main section:nth-of-type(3) ul {
+	padding-left: 1em;
+	list-style: none;
+}
+
+[class="detail"] main section:nth-of-type(3) li {
+	font-size: .9em;
+	padding-bottom: .25em;
+	gap: .25em;
+	display: flex;
+	align-items: center;
+	flex-direction: row nowrap;
+}
+
+[class="detail"] main section:nth-of-type(3) li b {
+	color: green;
+}
+
+[class="detail"] main section:nth-of-type(3) svg {
+	align-self: start;
+	rotate: 0deg;
+	stroke: green;
+	stroke-width: 3px;
+	width: 1em;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+[class="detail"] main section:nth-of-type(3) a {
+	color: rgb(4, 4, 212);
+	margin-left: 1em;
+	margin-top: .25em;
+}
+
+[class="detail"] main section:nth-of-type(3) a svg{
+	stroke: blue;
+	width: 1.5em;
+	height: 1.5em;
+	stroke-width: 2px;
+	padding-right: .5em;
+}
+
+[class="detail"] main section:nth-of-type(4) {
+	background: none;
+	margin-left: 1em;
+}
+
+[class="detail"] main section:nth-of-type(4) h2 {
+	color: black;
+	font-family: var(--h1-font);
+	font-size: 1em;
+	margin: 0;
+}
+
+[class="detail"] main section:nth-of-type(4) img {
+	height: 4em;
+	position: absolute;
+	right: 1em;
+	top: 2em;
+}
+
+[class="detail"] main section:nth-of-type(4) ul {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	gap: 1em;
+	margin-left: 1em;
+
+}
+
+[class="detail"] main section:nth-of-type(4) ul li {
+	padding: .25em 0em .25em .25em;
+	border: 1px solid #e2e2e2;
+	border-radius: .25em;
+	position: relative;
+}
+
+
 
