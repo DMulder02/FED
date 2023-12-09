@@ -4,6 +4,8 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap');
 
+
+
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -80,6 +82,46 @@ h1, h2, h3, h4 {
 	100% { scale: 1; }
 }
 
+
+/*******************/
+/*    DARK MODE    */
+/*******************/
+
+@media(prefers-color-scheme: dark) {
+
+	body {
+		background-color: rgb(2, 2, 19);
+		color: #fff;
+	}
+
+	header {
+		background: rgb(2, 2, 19);
+	}
+	
+
+	:root {
+		--border-sections: 1px solid #fff;
+
+		--color-text: #fff;
+		--color-text-white: #fff;
+		--color-background:  rgb(1, 1, 8);
+		--color-sections-darkblue: darkblue;
+
+		--color-buttons: rgb(0, 0, 145);
+		--color-buttons-orange: darkmagenta;
+		--color-a-blue: rgb(159, 181, 255);
+		--color-a-darkblue: rgb(159, 181, 255);;
+		--color-a-white: #fff;
+		--color-a-black: #fff;
+		--color-svg-blue: rgb(159, 181, 255);
+		--color-svg-darkblue: rgb(159, 181, 255);	
+		--color-svg-black: rgb(159, 181, 255);
+		--color-svg-white: rgb(159, 181, 255);
+}
+
+
+}
+
 /*******************/
 /*  FOCUS STATES  */
 /*******************/
@@ -100,6 +142,8 @@ a:focus {
 	animation-iteration-count: infinite;
 }
 
+
+
 /*******************/
 /*  HEADER PAGINA  */
 /*******************/
@@ -113,14 +157,11 @@ h1 {
 header {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	min-height:4em;
 	padding:0 1em;
-	background: var(--color-background);
 	line-height: 1;
 	right: 0;
 	left: 0;
-
 }
 
 header img {
@@ -162,7 +203,6 @@ header nav a {
 	text-decoration: none;
 	font-size: var(--text-font-size);
 	flex-grow: 1;
-	
   }
   
 button:not(disabled) {
@@ -469,11 +509,18 @@ main article:first-of-type ol li {
 	font-size: var(--text-font-size);
 	padding: 0.25em 1em;
 	margin-right: 0.4em;
-	list-style-type: none;
 	display: flex;
-	align-items: center;
+	list-style-type: none;
 	border: var(--border-sections);
 	border-radius: var(--border-radius);
+}
+
+main article:first-of-type ol li a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: var(--color-text);
 }
 
 main article:first-of-type ol li img {
@@ -672,6 +719,7 @@ main section:nth-of-type(1) ul li div svg {
 	fill: orange;
 	position: unset;
 	width: 1em;
+	background: none;
 }
 
 main section:nth-of-type(1) article ul li:nth-of-type(3){
@@ -1230,6 +1278,7 @@ footer div p a:hover {
 
 [class="detail"] section:nth-of-type(1) div p {
 	background-color:  rgb(231, 243, 255);
+	color: #111;
 	border: var(--border-sections);
 	padding: .25em .5em;
 	font-size: .75em;
@@ -1289,8 +1338,9 @@ footer div p a:hover {
 	top: 1.7em;
 }
 
-[class="detail"] main:nth-of-type(1) button p {
+[class="detail"] main button p {
 	padding-left: 3em;
+	color: var(--color-text);
 }
 
 /* KIES JE OPSLAG */
@@ -1312,6 +1362,7 @@ footer div p a:hover {
 	align-self: start;
 	margin: 0;
 	padding: .5em 0em 0em 0em;
+	color: var(--color-text);
 }
 
 
@@ -1396,6 +1447,7 @@ footer div p a:hover {
 
 [class="detail"] main section:nth-of-type(2) button svg {
 	position: static;
+	stroke: var(--color-a-black);
 }
 
 
@@ -1610,7 +1662,7 @@ footer div p a:hover {
 [class="detail"] main section:nth-of-type(6) ul li a:nth-of-type(2) {
 	padding-bottom: .5em;
 	margin: 0;
-	color: black;
+	color: var(--color-text);
 	text-decoration: none;
 	font-size: 1em;
 	font-weight: 700;
@@ -1832,8 +1884,8 @@ footer div p a:hover {
 
 [class="detail"] main section:nth-of-type(10) ul li a:nth-of-type(4) svg{
 	rotate: 0deg;
-	background-color: orange;
-	stroke: var(--color-svg-black);
+	background-color: var(--color-buttons-orange);
+	stroke: var(--color-a-black);
 	padding: .75em 1.5em;
 	width: 3em;
 	margin-top: 1em;
