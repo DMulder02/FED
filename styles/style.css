@@ -308,6 +308,7 @@ header nav section:nth-of-type(1) {
   
 header nav section:nth-of-type(1) button {
 	color: var(--color-buttons);
+	font-size: var(--text-font-size);
 	padding: 1em 1em;
 	gap: 1.5em;
 	border-bottom: var(--border-sections);
