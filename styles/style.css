@@ -164,12 +164,13 @@ header {
 	left: 0;
 }
 
-header img {
+header a img {
 	height: 2em;
 	margin-right: auto;
 }
   
 header ol {
+	margin-left: auto;
 	list-style: none;
 	display: flex;
 	gap: 1em;
@@ -301,9 +302,18 @@ header nav.toonMenu, header nav:focus-within {
 /* cadeaus en aanbiedeningen sectie */
 
 header nav section:nth-of-type(1) {
-	border-top: var(--border-sections);
 	display: flex;
 	flex-flow: column nowrap;
+}
+
+header nav section:nth-of-type(1) h2 {
+	padding: .5em;
+	font-family: var(--h1-font);
+	font-size: var(--h2-font-size);
+}
+
+header nav section:nth-of-type(1) button:first-of-type{
+	border-top: var(--border-sections);
 }
   
 header nav section:nth-of-type(1) button {
@@ -337,10 +347,19 @@ header nav section:nth-of-type(1) svg:nth-of-type(2){
 /* ACCOUNT SECTIE */
 
 header nav section:nth-of-type(2) {
-	border-top: var(--border-sections);
 	display: flex;
 	flex-flow: column nowrap;
 }
+
+header nav section:nth-of-type(2) h2 {
+	padding: .5em;
+	font-family: var(--h1-font);
+	font-size: var(--h2-font-size);
+}
+
+header nav section:nth-of-type(2) a:first-of-type {
+	border-top: var(--border-sections);
+}  
   
 header nav section:nth-of-type(2) a {
 	padding: 1em 1em;
@@ -400,12 +419,21 @@ header nav section:nth-of-type(2) a:nth-of-type(3) svg:nth-of-type(2) {
 /* OVER BOL.COM */
 
 header nav section:nth-of-type(3) {
-	border-top: var(--border-sections);
 	display: flex;
 	flex-flow: column nowrap;
 	margin-bottom: 1em;
 }
-  
+
+header nav section:nth-of-type(3) h2 {
+	padding: .5em;
+	font-family: var(--h1-font);
+	font-size: var(--h2-font-size);
+}
+
+header nav section:nth-of-type(3) a:first-of-type {
+	border-top: var(--border-sections);
+}  
+
 header nav section:nth-of-type(3) a {
 	padding: 1em 1em;
 	flex-direction: row;
@@ -593,6 +621,10 @@ main div div svg {
 /*******************/
 /*    ARTIKELEN    */
 /*******************/
+
+main section:nth-of-type(1) {
+	position: relative;
+}
 
 
 main section:nth-of-type(1) article {
@@ -1294,6 +1326,7 @@ footer div p a:hover {
 
 [class="detail"] section:nth-of-type(1) div svg {
 	position: absolute;
+	rotate: 0deg;
 	stroke: var(--color-svg-blue);
 	fill: none;
 	top: 2em;
