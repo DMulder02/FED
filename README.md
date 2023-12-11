@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-David Mulder
+  David Mulder
 
   #### Je startniveau:
   Rood
 
   #### Je focus:
-  Responsive
+  Surface plane
  
 </details>
 
@@ -228,19 +228,30 @@ https://www.bol.com/nl/nl/
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  Pagina 1 - light mode
+  <img src="readme-images/David-Mulder-bolcom-pagina1.jpg" width="375px" alt="uitomst opdracht 1">
+
+  Pagina 1 - dark mode
+  <img src="readme-images/David-Mulder-bolcom-pagina1-darkmode.jpg" width="375px" alt="uitomst opdracht 1">
+
+  Pagina 2 - light mode
+  <img src="readme-images/David-mulder-bolcom-pagina2.jpg" width="375px" alt="uitomst opdracht 1">
+
+  Pagina 2 - dark mode
+  <img src="readme-images/David-mulder-bolcom-pagina2-darkmode.jpg" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Ik wist voordat ik dit vak heb geleerd eigenlijk helemaal niet dat het openen van een hamburger menu zo makkelijk zou zijn. Ik heb er veel van geleerd en het is ook zeker handig om mee te nemen in de toekomst als ik ooit nog een keer moet coderen. 
+  <img src="readme-images/hamburgermenu.png" width="375px" alt="top">
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Ook heb ik geleerd hoe je darkmode aanmaakt en zelfs dat was eigenlijk niet zo lastig als gedacht, zolang je maar gebruik had gemaakt van genoeg custom properties om het allemaal in 1x te kunnen laten werken.
+  <img src="readme-images/geleerd-darkmode.png" width="375px" alt="top"> 
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Iets wat minder goed ging, of nou ja eigenlijk niet helemaal compleet lukte was het review blok, ik miste hier namelijk nog de hoeveelheid reviews per ster in een overzicht die wel op de originele pagina staan, maar ik kreeg het niet voor elkaar om dat als 1 geheel in elkaar te zetten en heb er dus voor gekozen om dat weg te laten, maar de rest van het review blok er wel in te zetten. 
+  <img src="readme-images/formulier-niet-goed.png" width="375px" alt="bummer">
 </details>
 
 
@@ -252,12 +263,7 @@ https://www.bol.com/nl/nl/
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
-
-  1. bron 1
-  2. bron 2
-  3. ...
-
+ - Alle code is zelf geschreven dus heb daar geen bronnen bij gebruikt
+ - Alle logo's images en svg's komen van bol.com.
+ - Alle tekst komt van de bol.com site vandaan
 </details>
