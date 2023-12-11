@@ -250,6 +250,10 @@ header ol li svg {
 	stroke-width: 1.5px;
 }
 
+header ol li svg:hover {
+	stroke: blue;
+}
+
 
 
 /******************/
@@ -290,6 +294,10 @@ header button svg {
 	width: 2.5em;
 	stroke-linecap: round;
 	stroke-linejoin: round;
+}
+
+header button svg:hover {
+	stroke: blue;
 }
 
 header nav button svg {
@@ -1090,12 +1098,14 @@ main section:nth-of-type(4) article:nth-of-type(2) svg {
 	stroke: var(--color-svg-white);
 }
 
-main section:nth-of-type(4) article:nth-of-type(2) a {
-	text-decoration: underline;
-}
-
 main section:nth-of-type(4) article div h4 {
 	padding-bottom: .25em;
+}
+
+main section:nth-of-type(4) article div p a:focus {
+	background-color: #fff;
+	color: blue;
+	padding: 0.5em;
 }
 
 main section:nth-of-type(4) article div p a {
@@ -1161,6 +1171,12 @@ main section:nth-of-type(4) article div p a:first-of-type {
 
 [class="detail"] main section:nth-of-type(13) article div h4 {
 	padding-bottom: .25em;
+}
+
+[class="detail"] main section:nth-of-type(13) article div p a:focus {
+	background-color: #fff;
+	color: blue;
+	padding: 0.5em;
 }
 
 [class="detail"] main section:nth-of-type(13) article div p a {
@@ -1400,6 +1416,11 @@ footer div p a:hover {
 	border-radius: var(--border-radius);
 	padding: .25em 1em;
 	margin-right: .5em;
+	min-width: 4em;
+	max-width: 4em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 [class="detail"] section:nth-of-type(1) div p {
