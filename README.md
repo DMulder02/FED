@@ -74,6 +74,13 @@ https://www.bol.com/nl/nl/
  -  Bij service en contact blok zegt de screenreader eerst twee keer: 'informatie over inhoud'
  -  meld je aan knop zegt alleen meld je aan, niet waarvoor. 
  -  op de detailpagina werken de slider voor de fotos van het product niet. 
+
+   WCAG checklist
+  <img src="readme-images/checklist-pagina1.heic" width="375px" alt="checklist pagina 1">
+  <img src="readme-images/checklist-pagina2.heic" width="375px" alt="checklist pagina 2">
+  <img src="readme-images/checklist-pagina3.heic" width="375px" alt="checklist pagina 3">
+  <img src="readme-images/checklist-pagina4.heic" width="375px" alt="checklist pagina 4">
+  <img src="readme-images/checklist-pagina5.heic" width="375px" alt="checklist pagina 5">
 </details>
 
 
@@ -182,7 +189,16 @@ https://www.bol.com/nl/nl/
   - Ik heb genoeg kleur contrast op al mijn elementen, ook heb ik het standaard lettertype iets groter gemaakt dan op de bol.com website zelf. die was daar namelijk erg klein waardoor het misschien slechter leesbaar zou zijn. 
   - de linkjes voor de socials gaven niet aan naar welke social media je dan zou gaan (nu wel zo)
   - ik heb een dark mode toegevoegd en kleurcontrast daarop ook aangepaast zodat het voor iedereen leesbaar is. 
-  - tabben door de pagina's heen gaat helemaal prima en alle elementen hebben een focus state waardoor je goed kan zien waar de tab op dat moment op staat. 
+  - tabben door de pagina's heen gaat helemaal prima en alle elementen hebben een focus state waardoor je goed kan zien waar de tab op dat moment op staat.
+  - Ik had eerst geen dark mode support, dat heb ik nu wel toegevoegd. 
+  - website kan nu wel horizontaal en verticaal bekeken worden op de mobiel. 
+
+  tweede check WCAG:
+  <img src="readme-images/checklist-pagina1.heic" width="375px" alt="checklist pagina 1">
+  <img src="readme-images/checklist-pagina2.heic" width="375px" alt="checklist pagina 2">
+  <img src="readme-images/checklist-pagina3.heic" width="375px" alt="checklist pagina 3">
+  <img src="readme-images/checklist-pagina4.heic" width="375px" alt="checklist pagina 4">
+  <img src="readme-images/checklist-pagina5.heic" width="375px" alt="checklist pagina 5"> 
 </details>
 
 
