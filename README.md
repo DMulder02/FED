@@ -76,11 +76,11 @@ https://www.bol.com/nl/nl/
  -  op de detailpagina werken de slider voor de fotos van het product niet. 
 
    WCAG checklist
-  <img src="readme-images/checklist-pagina1.heic" width="375px" alt="checklist pagina 1">
-  <img src="readme-images/checklist-pagina2.heic" width="375px" alt="checklist pagina 2">
-  <img src="readme-images/checklist-pagina3.heic" width="375px" alt="checklist pagina 3">
-  <img src="readme-images/checklist-pagina4.heic" width="375px" alt="checklist pagina 4">
-  <img src="readme-images/checklist-pagina5.heic" width="375px" alt="checklist pagina 5">
+  <img src="readme-images/checklist-pagina1.png" width="375px" alt="checklist pagina 1">
+  <img src="readme-images/checklist-pagina2.png" width="375px" alt="checklist pagina 2">
+  <img src="readme-images/checklist-pagina3.png" width="375px" alt="checklist pagina 3">
+  <img src="readme-images/checklist-pagina4.png" width="375px" alt="checklist pagina 4">
+  <img src="readme-images/checklist-pagina5.png" width="375px" alt="checklist pagina 5"> 
 </details>
 
 
@@ -194,11 +194,11 @@ https://www.bol.com/nl/nl/
   - website kan nu wel horizontaal en verticaal bekeken worden op de mobiel. 
 
   tweede check WCAG:
-  <img src="readme-images/checklist-pagina1.heic" width="375px" alt="checklist pagina 1">
-  <img src="readme-images/checklist-pagina2.heic" width="375px" alt="checklist pagina 2">
-  <img src="readme-images/checklist-pagina3.heic" width="375px" alt="checklist pagina 3">
-  <img src="readme-images/checklist-pagina4.heic" width="375px" alt="checklist pagina 4">
-  <img src="readme-images/checklist-pagina5.heic" width="375px" alt="checklist pagina 5"> 
+  <img src="readme-images/checklist-pagina1.png" width="375px" alt="checklist pagina 1">
+  <img src="readme-images/checklist-pagina2.png" width="375px" alt="checklist pagina 2">
+  <img src="readme-images/checklist-pagina3.png" width="375px" alt="checklist pagina 3">
+  <img src="readme-images/checklist-pagina4.png" width="375px" alt="checklist pagina 4">
+  <img src="readme-images/checklist-pagina5.png" width="375px" alt="checklist pagina 5"> 
 </details>
 
 
